@@ -1,6 +1,7 @@
 <?php
 $a = 2019;
-echo "a = $a<br/>";
+echo "a = $a<br/>", "type(a): ", gettype($a), "<br/>";
+echo "--------------------------------------------<br/>";
 define("NAME", "Дима");
 $age = 23;
 echo "Меня зовут: ", NAME, "</br>";
