@@ -9,7 +9,11 @@ echo "Меня зовут: ", NAME, "</br>";
 echo "Мне $age года<br/>";
 unset($age);
 if (isset($age))
+{
     echo "Переменная age существует<br/>";
+}
 else
+{
     echo "Переменная age была успешно удалена";
+}
 ?>
