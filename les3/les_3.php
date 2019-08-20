@@ -4,8 +4,8 @@ $var += 12;
 $var -= 14;
 $var *= 5;
 $var /= 7;
-$var += 1; // alt $var++; но $var = 'ab'; $var++; ($var = 'ac')
-$var -= 1; // alt $var--; но $var = 'ab'; $var--; ($var = 'aa')
+$var++; // alt $var+=; но $var = 'ab'; $var++; ($var = 'ac')
+$var--; // alt $var-=; но $var = 'ab'; $var--; ($var = 'aa')
 echo "$var"."<br/>"."\\----------------------/<br/>";
 
 $a = 17;
@@ -40,4 +40,26 @@ else
     echo "На Земле используют десятиричную систему исчисления<br/>";
 }
 echo "\\----------------------/<br/>"
+?>
+<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+    <form method="post">
+        <p>Ваше имя:<input type="text" name="name" /></p>
+        <p><input type="submit" /></p>
+    </form>
+    </body>
+    </html>
+<?php
+$separation = explode(" ", $_POST['name']);
+$nam = substr($separation[1], 0, 2);
+$sec_nam = substr($separation[2], 0, 2);
+echo "$separation[0] "."$nam. "."$sec_nam.<br/>";
 ?>
