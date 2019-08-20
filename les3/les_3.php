@@ -6,7 +6,7 @@ $var *= 5;
 $var /= 7;
 $var++; // alt $var+=; но $var = 'ab'; $var++; ($var = 'ac')
 $var--; // alt $var-=; но $var = 'ab'; $var--; ($var = 'aa')
-echo "$var"."<br/>"."\\----------------------/<br/>";
+echo "$var<br/>"."\\----------------------/<br/>";
 
 $a = 17;
 $b = 10;
@@ -59,7 +59,7 @@ echo "\\----------------------/<br/>"
     </html>
 <?php
 $separation = explode(" ", $_POST['name']);
-$nam = substr($separation[1], 0, 2);
-$sec_nam = substr($separation[2], 0, 2);
+$nam = mb_substr($separation[1], 0, 1);
+$sec_nam = mb_substr($separation[2], 0, 1);
 echo "$separation[0] "."$nam. "."$sec_nam.<br/>";
 ?>
