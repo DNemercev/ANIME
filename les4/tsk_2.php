@@ -1,4 +1,5 @@
 <?php
+$method = 1;
 $array = array(
     'a1' => array('id'=>'1', 'age'=>'16', 'gender'=>'m', 'login'=>'Вася'),
     'a2' => array('id'=>'2', 'age'=>'18', 'gender'=>'m', 'login'=>'Петя'),
@@ -9,17 +10,16 @@ $array = array(
     'a7' => array('id'=>'7', 'age'=>'45', 'gender'=>'m', 'login'=>'Макс'),
     'a8' => array('id'=>'8', 'age'=>'20', 'gender'=>'m', 'login'=>'Илья'),
     'a9' => array('id'=>'9', 'age'=>'20', 'gender'=>'g', 'login'=>'Даша'), );
-function str_cmp($a, $b)
+
+$age  = array_column($array, 'age');
+$gender = array_column($array, 'gender');
+if ($method == 1)
 {
-    return strcmp($a["age"], $b["age"]);
+    array_multisort($age, SORT_DESC, $gender, SORT_ASC, $array);
 }
-function rev_str_cmp($a, $b)
+elseif ($method == 2)
 {
-    return ($a["login"] < $b["login"]) ? -1 : 1;
+    array_multisort($gender, SORT_DESC, $age, SORT_ASC, $array);
 }
-usort($array, "str_cmp");
-print_r($array);
-echo "<br/><br/>";
-usort($array,"rev_str_cmp");
-print_r($array);
+var_dump($array);
 ?>
