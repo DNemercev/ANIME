@@ -8,11 +8,15 @@ function derivation(int $N)
 	{
 	while ($j < $i)
 		{
-			echo "$i ";
+			if ($N - 1 > 0)
+				echo "$i, ";
+			if ($N - 1 == 0)
+				echo "$i";
 			$N--;
 			$j++;
 		}
 		derivation($N);
 	}
 }
+derivation(10);
 ?>
