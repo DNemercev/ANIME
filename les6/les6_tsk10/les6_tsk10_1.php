@@ -18,5 +18,5 @@ function derivation(int $N)
 		derivation($N);
 	}
 }
-derivation(10);
+derivation(100);
 ?>
