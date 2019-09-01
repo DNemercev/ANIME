@@ -12,4 +12,7 @@ function summ($arr_for_sort)
 	$sum_pos_neg = array('pos_sum' => array_sum($pos_arr),'neg_sum' => array_sum($neg_arr));
 	return $sum_pos_neg;
 }
+$arr = [2, -5, -9, 15, 11, -4, 7, 1, -10];
+summ($arr);
+var_dump(summ($arr));
 ?>

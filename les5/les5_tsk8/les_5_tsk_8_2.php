@@ -16,6 +16,8 @@
 				$i++;
 			}
 		}
+		var_dump($arr);
 		return $arr;
 	}
+	divider(10);
 ?>
