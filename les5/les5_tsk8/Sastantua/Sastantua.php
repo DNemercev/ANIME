@@ -26,7 +26,7 @@ function last_stage ($j, $k, $all_spase)
 		{
 			while ($m < $all_spase)
 			{
-				echo " .";
+				echo " ";
 				$m++;
 			}
 			$m = 0;
@@ -40,7 +40,7 @@ function last_stage ($j, $k, $all_spase)
 					echo "*";
 				$l_k++;
 			}
-			echo "\\<br/>";
+			echo "\\\n";
 			$l_k = 0;
 			$k = $k + 2;
 			$l++;
@@ -52,7 +52,7 @@ function last_stage ($j, $k, $all_spase)
 		{
 			while ($m < $all_spase)
 			{
-				echo "q";
+				echo " ";
 				$m++;
 			}
 			$m = 0;
@@ -61,12 +61,12 @@ function last_stage ($j, $k, $all_spase)
 			while ($l_k < $k)
 			{
 				if (($l_k > ($k - 4)/2) && ($l_k < $k/2 + 1) && ($l > 0))
-					echo "| ";
+					echo "|";
 				else
 					echo "*";
 				$l_k++;
 			}
-			echo "\\<br/>";
+			echo "\\\n";
 			$l_k = 0;
 			$k = $k + 2;
 			$l++;
@@ -78,7 +78,7 @@ function last_stage ($j, $k, $all_spase)
 		{
 			while ($m < $all_spase)
 			{
-				echo "q";
+				echo " ";
 				$m++;
 			}
 			$m = 0;
@@ -91,13 +91,13 @@ function last_stage ($j, $k, $all_spase)
 					if (($j - $l == 3) && ($l_k > ($k - 1)/2) && ($l_k < ($k + 2)/2))
 						echo "$";
 					else
-						echo "| ";
+						echo "|";
 				}
 				else
 					echo "*";
 				$l_k++;
 			}
-			echo "\\<br/>";
+			echo "\\\n";
 			$l_k = 0;
 			$k = $k + 2;
 			$l++;
@@ -119,7 +119,7 @@ function sastantua($num_of_tiers)
 		{
 			while ($m < $all_spase)
 			{
-				echo "q";
+				echo " ";
 				$m++;
 			}
 			echo "/";
@@ -128,7 +128,7 @@ function sastantua($num_of_tiers)
 				echo "*";
 				$l_k++;
 			}
-			echo "\\<br/>";
+			echo "\\\n";
 			$l_k = 0;
 			$m = 0;
 			$all_spase--;
@@ -143,6 +143,5 @@ function sastantua($num_of_tiers)
 	last_stage ($j, $k, $all_spase);
 	return 0;
 }
-sastantua(7);
+sastantua(1);
 ?>
-
