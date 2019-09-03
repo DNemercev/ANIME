@@ -1,5 +1,5 @@
 <?php
-function derivation(int $N)
+function derivation($N)
 {
 	$j = 0; 
 	static $i = 0;

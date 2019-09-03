@@ -16,9 +16,9 @@ function operation ($NumOne, $NumTwo, $type_of_operation)
 			$a = add($NumOne, $NumTwo);
 		}
 		else
-		{
-			$a = sub($NumOne, $NumTwo);
-		}
+		    {
+            $a = sub($NumOne, $NumTwo);
+        }
 	}
 	else{
 		echo "Введены неверные параметры<br/>";
@@ -26,4 +26,5 @@ function operation ($NumOne, $NumTwo, $type_of_operation)
 	}
 	return $a;
 }
+
 ?>

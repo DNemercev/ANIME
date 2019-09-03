@@ -4,16 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<meta http-equiv= "X-UA-Compatible" content="ie=edge">
+	<title>les_6_tsk9_1</title>
 </head>
 <body>
 	<form method="post">
 		<select name="operation">
-			<option value = "add">add</option>
-			<option value = "subtract">subtract</option>
-			<option value = "multiply">multiply</option>
-			<option value = "divide">divide</option>
+			<option value = 'add'>add</option>
+			<option value = 'subtract'>subtract</option>
+			<option value = 'multiply'>multiply</option>
+			<option value = 'divide'>divide</option>
 		</select>
 		<input type="text" name="numOne" value="1">
 		<input type="text" name="numTwo" value="1">
@@ -22,29 +22,31 @@
 </body>
 </html>
 <?php
-	function operation($numOne, $numTwo = 1, $operator)
-	{
-		if (is_int($numTwo) && is_int($numOne) && ($operator == 'add' || $operator == 'subtract' || $operator == 'multiply' || $operator == 'divide'))
-		{	
-			if ($operator == 'add')
-				return ($numOne + $numTwo);
-			elseif ($operator == 'subtract')
-				return ($numOne - $numTwo);
-			elseif ($operator == 'multiply')
-				return ($numOne * $numTwo);
-			else
-			{
-				if ($numTwo == 0)
-					return 0;
-				else
-					return ($numOne / $numTwo);
-			}
-		}
-		else
-		{
-			echo "Введите подходящие значения<br/>";
-			return 0;
-		}
-	}
-	echo operation($_POST['numOne'], $_POST['numTwo'], $_POST['operation']);
+	function operation($numOne, $numTwo, $operator)
+    {
+        if (ctype_digit($numTwo) && ctype_digit($numOne) && ($operator == 'add' || $operator == 'subtract' || $operator == 'multiply' || $operator == 'divide'))
+        {
+            if ($operator == 'add')
+                $a = ($numOne + $numTwo);
+            elseif ($operator == 'subtract')
+                $a = ($numOne - $numTwo);
+            elseif ($operator == 'multiply')
+                $a = ($numOne * $numTwo);
+            else
+                {
+                if ($numTwo == 0)
+                    $a = 0;
+                else
+                    $a = ($numOne / $numTwo);
+                }
+            echo $a;
+            return $a;
+        }
+        else
+            {
+            echo "Введите подходящие значения<br/>";
+            return 0;
+        }
+    }
+	operation($_POST["numOne"], $_POST["numTwo"], $_POST["operation"]);
 ?>

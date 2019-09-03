@@ -15,5 +15,5 @@ function changeling($N)
 	if (($N - $N%10)/10 == 0 && $N < 0)
 		echo "- ";
 }
-changeling(0);
+changeling(-11250);
 ?>
